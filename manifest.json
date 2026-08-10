@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Spydy Reminder",
+  "version": "1.0.0",
+  "description": "A simple Chrome extension for scheduling reminder notifications from your browser.",
+  "permissions": ["alarms", "notifications", "storage", "windows"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Spydy Reminder",
+    "default_popup": "popup.html"
+  },
+  "minimum_chrome_version": "114"
+}

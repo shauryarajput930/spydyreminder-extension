@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spydy Reminder</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="brand">
+          <div>
+            <h1>Spydy Reminder</h1>
+            <p>Schedule quick browser reminders</p>
+          </div>
+        </div>
+      </header>
+
+      <form id="reminder-form" class="card form-card">
+        <div class="field">
+          <label for="message">Message</label>
+          <input id="message" type="text" maxlength="120" placeholder="Reminder" required />
+        </div>
+
+        <div class="schedule-panel">
+          <div class="field">
+            <label for="when">Schedule</label>
+            <input id="when" type="datetime-local" required />
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="primary">Set Reminder</button>
+        </div>
+      </form>
+
+      <p id="status" class="status">No reminders yet. Add one above.</p>
+
+      <section class="upcoming card">
+        <div class="upcoming-header">
+          <div>
+            <h2>Upcoming</h2>
+            <p>Manage your next reminders</p>
+          </div>
+          <button id="clear-all" type="button" class="text-button">Clear All</button>
+        </div>
+
+        <ul id="reminder-list"></ul>
+
+        <div class="footer-row">
+          <label class="checkbox">
+            <input type="checkbox" checked />
+            Launch at Login
+          </label>
+          <button id="quick-test" type="button" class="secondary">Test</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

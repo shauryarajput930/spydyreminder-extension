@@ -1,0 +1,263 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f1116;
+  color: #f4f4f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 380px;
+  min-height: 540px;
+  background: radial-gradient(circle at top, #23262f 0%, #0c0f16 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(81, 74, 255, 0.18), transparent 30%);
+  pointer-events: none;
+}
+
+.app {
+  padding: 18px;
+}
+
+.header {
+  margin-bottom: 18px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: -0.03em;
+}
+
+.brand p {
+  margin: 6px 0 0;
+  color: #a7a8b8;
+  font-size: 12px;
+}
+
+.card {
+  background: rgba(19, 21, 33, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(18px);
+  padding: 18px;
+}
+
+.form-card {
+  display: grid;
+  gap: 14px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #8e90a6;
+}
+
+.field input,
+.schedule-panel input {
+  width: 100%;
+  min-height: 44px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #f4f4f5;
+  font: 500 14px/1.4 Inter, sans-serif;
+}
+
+.field input::placeholder,
+.schedule-panel input::placeholder {
+  color: #7e8092;
+}
+
+.schedule-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.schedule-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  background: transparent;
+  color: #c2c4db;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: #f7f7ff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.time-row {
+  display: flex;
+  gap: 10px;
+}
+
+.time-row input {
+  flex: 1;
+}
+
+.time-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.pill {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  color: #c2c4db;
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+}
+
+.primary {
+  width: 100%;
+  padding: 14px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ed3f4e 0%, #ff6154 100%);
+  color: white;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+}
+
+.primary:hover {
+  filter: brightness(1.05);
+}
+
+.status {
+  margin: 14px 0 0;
+  font-size: 12px;
+  color: #8e90a6;
+}
+
+.upcoming {
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.upcoming-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upcoming-header h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.upcoming-header p {
+  margin: 6px 0 0;
+  color: #8e90a6;
+  font-size: 12px;
+}
+
+.text-button,
+.secondary {
+  padding: 10px 14px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  color: #c2c4db;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#reminder-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.reminder-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  padding: 14px 16px;
+}
+
+.reminder-details {
+  display: grid;
+  gap: 4px;
+}
+
+.reminder-message {
+  font-size: 13px;
+  font-weight: 700;
+  color: #f7f7ff;
+}
+
+.reminder-time {
+  font-size: 12px;
+  color: #8e90a6;
+}
+
+.delete-btn {
+  border: none;
+  background: rgba(237, 63, 78, 0.12);
+  color: #ff7a80;
+  border-radius: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.empty {
+  font-size: 13px;
+  color: #8e90a6;
+  text-align: center;
+  padding: 14px 0;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #c2c4db;
+  font-size: 12px;
+}
+
+.checkbox input {
+  width: 16px;
+  height: 16px;
+  accent-color: #ed3f4e;
+}
